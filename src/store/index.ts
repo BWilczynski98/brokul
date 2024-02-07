@@ -5,13 +5,14 @@ import {
   Store as VuexStore,
 } from "vuex";
 import { counter } from "./modules/counter";
+import { orders } from "./modules/orders";
 import type { State } from "./modules/counter/state";
 import type { Mutations } from "./modules/counter/mutations";
 import type { Actions } from "./modules/counter/actions";
 import type { Getters } from "./modules/counter/getters";
 
 export const store = createStore({
-  modules: { counter },
+  modules: { counter, orders },
 });
 
 export type Store = Omit<
